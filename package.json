@@ -2,7 +2,7 @@
   "name": "react_to_do_app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://atilganf.io/reactToDoApp",
+  "homepage": "http://atilganf.github.io/reactToDoApp",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
