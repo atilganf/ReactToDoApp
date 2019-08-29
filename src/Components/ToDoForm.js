@@ -25,13 +25,13 @@ export default class ToDoForm extends React.Component {
     }
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form className="toDoForm" onSubmit={this.handleSubmit}>
                 <input
                     value={this.state.text}
                     onChange={this.setText}
                     placeholder="Task"
                 />
-                <button type="submit">Add Task</button>
+                <button class="sbmt_btn" type="submit">+</button>
             </form>
         );
     }

@@ -15,8 +15,8 @@ export default class ToDoList extends React.Component {
          todos: [todo, ...this.state.todos]
       })
    }
-   
-   
+
+
    changeToDoShow = (str) => {
       this.setState({
          todoShow: str,
@@ -68,12 +68,12 @@ export default class ToDoList extends React.Component {
          todos = this.state.todos.filter(todo => todo.complete);
       }
       return (
-         <div>
+         <div className="toDoList">
             <ToDoForm addTodo={this.addTodo} />
-            <button onClick={() => this.changeToDoShow("all")}>All</button>
-            <button onClick={() => this.changeToDoShow("active")}>Active</button>
-            <button onClick={() => this.changeToDoShow("complete")}>Complete</button>
-            <div>Todos Left : {this.state.todos.filter(todo => !todo.complete).length}</div>
+            <button className="top_btn" onClick={() => this.changeToDoShow("all")}>All</button>
+            <button className="top_btn" onClick={() => this.changeToDoShow("active")}>Active</button>
+            <button className="top_btn" onClick={() => this.changeToDoShow("complete")}>Complete</button>
+            <div className="todo_left">Todos Left : {this.state.todos.filter(todo => !todo.complete).length}</div>
             {todos.map(todo => (
                <ToDoElm
                   key={todo.id}
@@ -83,10 +83,11 @@ export default class ToDoList extends React.Component {
                />)
             )}
             {this.state.todos.some(todo => todo.complete) ?
-               <button
+               <button className="btm_btn delAll_btn"
                   onClick={() => this.deleteAllComplete()}
                >Delete All Complete</button> : null}
-            <button onClick={() => this.toggleAllComplete()}>Toggle All Complete</button>
+            <button className="btm_btn toggAll_btn"
+               onClick={() => this.toggleAllComplete()}>Toggle All Complete</button>
          </div>
       );
    }
