@@ -15,6 +15,7 @@ body {
 }
 .App {
   text-align: center;
+  overflow-x: hidden;
   .toDoList {
     width: 425px;
     display: block;
@@ -29,6 +30,7 @@ body {
       input {
         padding: 10px 15px;
         font-size: 1em;
+        width: 100%;
         border: 2px solid $sccs_clr;
         border-radius: 5px;
         outline: none;
@@ -37,13 +39,14 @@ body {
       .sbmt_btn {
         position: absolute;
         cursor: pointer;
-        right: calc(50% - 210px);
+        right: 0;
         bottom: 0;
         border-radius: 0 5px 5px 0;
         display: inline-block;
         outline: none;
         text-align: center;
         padding: 3px;
+        height: 100%;
         border: none;
         width: 58px;
         background-color: $sccs_clr;
@@ -83,7 +86,7 @@ body {
         color: #111;
         cursor: pointer;
         font-size: 0.7em;
-        background-color: $scndry_clr;
+        background-color: $info_clr;
         transition: background-color 0.4s;
       }
       .complete {
@@ -124,4 +127,36 @@ body {
       background-color: $wrnng_clr;
     }
   }
+}
+@media (max-width: 700px){
+   html{
+      .App{
+         font-size: 24px;
+         .toDoList{
+            width: 90%;
+            .top_btn{
+               width: 30%;
+               margin: 15px 1.5% 5px 1.5%;
+            }
+            .todo_left{
+               margin-bottom: 10px;
+            }
+            .toDoElm{
+               margin: 0 0 15px 0;
+            }
+            .btm_btn{
+               width: 48%;
+               padding: 8px;
+               margin: 10px 0;
+               font-size: 0.6em;
+            }
+            .delAll_btn{
+               margin-right: 2%;
+            }
+            .toggAll_btn{
+               margin-left: 2%;
+            }
+         }
+      }
+   }
 }

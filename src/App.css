@@ -11,6 +11,7 @@ body {
 
 .App {
   text-align: center;
+  overflow-x: hidden;
 }
 .App .toDoList {
   width: 425px;
@@ -28,6 +29,7 @@ body {
 .App .toDoList .toDoForm input {
   padding: 10px 15px;
   font-size: 1em;
+  width: 100%;
   border: 2px solid #28a745;
   border-radius: 5px;
   outline: none;
@@ -36,13 +38,14 @@ body {
 .App .toDoList .toDoForm .sbmt_btn {
   position: absolute;
   cursor: pointer;
-  right: calc(50% - 210px);
+  right: 0;
   bottom: 0;
   border-radius: 0 5px 5px 0;
   display: inline-block;
   outline: none;
   text-align: center;
   padding: 3px;
+  height: 100%;
   border: none;
   width: 58px;
   background-color: #28a745;
@@ -82,7 +85,7 @@ body {
   color: #111;
   cursor: pointer;
   font-size: 0.7em;
-  background-color: #6c757d;
+  background-color: #17a2b8;
   transition: background-color 0.4s;
 }
 .App .toDoList .toDoElm .complete {
@@ -120,6 +123,37 @@ body {
 }
 .App .toDoList .toggAll_btn {
   background-color: #ffc107;
+}
+
+@media (max-width: 700px) {
+  html .App {
+    font-size: 24px;
+  }
+  html .App .toDoList {
+    width: 90%;
+  }
+  html .App .toDoList .top_btn {
+    width: 30%;
+    margin: 15px 1.5% 5px 1.5%;
+  }
+  html .App .toDoList .todo_left {
+    margin-bottom: 10px;
+  }
+  html .App .toDoList .toDoElm {
+    margin: 0 0 15px 0;
+  }
+  html .App .toDoList .btm_btn {
+    width: 48%;
+    padding: 8px;
+    margin: 10px 0;
+    font-size: 0.6em;
+  }
+  html .App .toDoList .delAll_btn {
+    margin-right: 2%;
+  }
+  html .App .toDoList .toggAll_btn {
+    margin-left: 2%;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */
